@@ -367,11 +367,12 @@ h1.title {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+}
+.dashed {
+    border-top: 1px dashed #eee;
     margin-top: 20px;
     padding-top: 15px;
-    border-top: 1px dashed #eee;
 }
-
 .dot {
     height: 6px;
     width: 6px;
@@ -426,15 +427,56 @@ h1.title {
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffffb2);
 }
 
-/* --- Interêts --- */
-.centredinterets {
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-top: 50px;
+/* --- Experiences --- */
+:root {
+    --primary-blue: #0051FF;
+    --bg-light: #F8FAFF;
 }
 
-.interet {
-    margin-top: 20px;
+.card-engagement {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 81, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+    background: white;
+}
+
+.card-engagement:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 81, 255, 0.12);
+    border-color: var(--primary-blue);
+}
+
+.tag-date {
+    background: rgba(0, 81, 255, 0.1);
+    color: var(--primary-blue);
+    padding: 6px 15px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.card-engagement .title {
+    color: var(--primary-blue);
+}
+
+.card-engagement.featured {
+    border-top: 4px solid var(--primary-blue);
+}
+
+.card-engagement .content {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #4A4A4A;
+}
+
+.card-engagement .content strong {
+    color: var(--primary-blue);
 }
 
 /* --- Contact --- */
@@ -501,11 +543,12 @@ h1.title {
     margin: 40px auto 40px auto;
 }
 
-.formation-title-img {
+.title-img {
     width: 600px;
     height: auto;
-    display: block;
-    margin: 40px auto 40px auto;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 40px auto;
 }
 
 .container {

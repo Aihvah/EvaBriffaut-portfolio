@@ -138,6 +138,108 @@ h1.title {
     margin-bottom: 10px;
     display: inline-block;
     border: 1px solid rgba(0, 81, 255, 0.1);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* --- Compétences Modern Design --- */
+.skill-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 81, 255, 0.05);
+    padding: 2rem;
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 20px 40px rgba(0, 81, 255, 0.12);
+    border-color: rgba(0, 81, 255, 0.2);
+}
+
+.skill-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-blue), #60a5fa);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.skill-card:hover::before {
+    opacity: 1;
+}
+
+.skill-icon-outer {
+    width: 65px;
+    height: 65px;
+    background: var(--soft-blue);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover .skill-icon-outer {
+    background: var(--primary-blue);
+    color: white !important;
+    transform: rotate(8deg);
+}
+
+.skill-card:hover .skill-icon-outer i {
+    color: white !important;
+}
+
+.skill-title {
+    font-weight: 800;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #1a1a1b;
+}
+
+.skill-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.skill-list li {
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.skill-list li::before {
+    content: "→";
+    margin-right: 8px;
+    color: var(--primary-blue);
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+/* Soft Skills Layout */
+.soft-skills-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(240, 245, 255, 0.5));
+    border: 1px solid rgba(0, 81, 255, 0.15);
+}
+
+.tags-skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
 }
 
 .tag-skill:hover {
